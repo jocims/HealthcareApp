@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Getter
@@ -11,13 +13,21 @@ import java.time.LocalDateTime;
 @NoArgsConstructor  // ✅ This is required by Hibernate!
 @AllArgsConstructor
 @Entity
-@Table(name="work_base")
-public class WorkBase {
+@Table(name="user")
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long workBaseId;
-    private String location;
+    private long userId;
+    private String name;
+    private LocalDate dateOfBirth;
+    private String employeeAddress;
+    private String email;
+    private String password;
+    private String userType;
+
+    private boolean isActive; // Indicates if the user account is active or deactivated
+
 
     @CreationTimestamp  // Automatically sets when first created
     @Column(updatable = false) // Prevents updates after creation

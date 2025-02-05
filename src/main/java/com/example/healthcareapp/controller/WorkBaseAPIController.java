@@ -19,40 +19,30 @@ public class WorkBaseAPIController {
     //Specific WorkBase
     @GetMapping("{workBaseId}")
     public WorkBase getWorkBaseDetails(@PathVariable("workBaseId") Integer workBaseId) {
-        return workBaseService.getWorkBase(workBaseId);
-
-//        return new WorkBase(
-//                workBaseId,
-//                123456,
-//                "Vitoria",
-//                LocalDate.of(2025, 1, 1),
-//                LocalDate.of(2025, 1, 2)
-//        );
+        return workBaseService.getById(workBaseId);
     }
 
     //Get All Work Bases in DB
     @GetMapping()
     public List<WorkBase> getAllWorkBaseDetails() {
-        return workBaseService.getAllWorkBases();
+        return workBaseService.getAll();
     }
 
     @PostMapping
     public String createWorkBaseDetails(@RequestBody WorkBase workBase) {
-        workBaseService.createWorkBase(workBase);
+        workBaseService.save(workBase);
         return "Work Base Created Successfully";
     }
 
     @PutMapping
     public String updateWorkBaseDetails(@RequestBody WorkBase workBase) {
-        workBaseService.updateWorkBase(workBase);
+        workBaseService.save(workBase);
         return "Work Base Updated Successfully";
     }
 
     @DeleteMapping("{workBaseId}")
     public String updateWorkBaseDetails(@PathVariable("workBaseId") Integer workBaseId) {
-        workBaseService.deleteWorkBase(workBaseId);
+        workBaseService.delete(workBaseId);
         return "Work Base Deleted Successfully";
     }
-
-
 }
