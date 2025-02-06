@@ -21,7 +21,7 @@ public class MedicalCertificate {
     private long medicalCertificateId;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id", nullable = false)
+    @JoinColumn(name = "employeeId", nullable = false)
     private Employee employee;
 
     private String issuedBy; // Who issued the certificate

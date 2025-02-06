@@ -20,7 +20,7 @@ public class Score {
     private long scoreId;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id", nullable = false)
+    @JoinColumn(name = "employeeId", nullable = false)
     private Employee employee;
 
     private int scoreValue; // e.g., score value

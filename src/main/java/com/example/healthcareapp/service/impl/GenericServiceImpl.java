@@ -1,9 +1,10 @@
+//GenericServiceImpl.java
+
 package com.example.healthcareapp.service.impl;
 
 import com.example.healthcareapp.service.GenericService;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
-import java.util.Optional;
 
 public class GenericServiceImpl<T, ID> implements GenericService<T, ID> {
 

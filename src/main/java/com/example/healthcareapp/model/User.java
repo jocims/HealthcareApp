@@ -1,3 +1,5 @@
+//User.java
+
 package com.example.healthcareapp.model;
 
 import jakarta.persistence.*;
@@ -23,7 +25,6 @@ public class User {
     private LocalDate dateOfBirth;
     private String employeeAddress;
     private String email;
-    private String password;
     private String userType;
 
     private boolean isActive; // Indicates if the user account is active or deactivated

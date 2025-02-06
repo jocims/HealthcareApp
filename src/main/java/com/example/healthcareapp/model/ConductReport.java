@@ -21,7 +21,7 @@ public class ConductReport {
     private long conductReportId;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id", nullable = false)
+    @JoinColumn(name = "employeeId", nullable = false)
     private Employee employee;
 
     private String description; // Details about the conduct

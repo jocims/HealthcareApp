@@ -21,7 +21,7 @@ public class PerformanceReview {
     private long performanceReviewId;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id", nullable = false)
+    @JoinColumn(name = "employeeId", nullable = false)
     private Employee employee;
 
     private String reviewer; // The person conducting the review

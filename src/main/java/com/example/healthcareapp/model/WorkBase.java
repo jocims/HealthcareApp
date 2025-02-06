@@ -1,3 +1,5 @@
+//WorkBase.java
+
 package com.example.healthcareapp.model;
 
 import jakarta.persistence.*;
@@ -15,7 +17,6 @@ import java.time.LocalDateTime;
 public class WorkBase {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long workBaseId;
     private String location;
 
